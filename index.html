@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script>
+      dayjs.locale('pt-br')
+    </script>
+
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <form onsubmit="salvaratividade(event)">
+
+        <div id="place" class="card-bg">
+
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.6666 8.33317C16.6666 13.3332 9.99992 18.3332 9.99992 18.3332C9.99992 18.3332 3.33325 13.3332 3.33325 8.33317C3.33325 6.56506 4.03563 4.86937 5.28587 3.61913C6.53612 2.36888 8.23181 1.6665 9.99992 1.6665C11.768 1.6665 13.4637 2.36888 14.714 3.61913C15.9642 4.86937 16.6666 6.56506 16.6666 8.33317Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M9.99992 10.8332C11.3806 10.8332 12.4999 9.71388 12.4999 8.33317C12.4999 6.95246 11.3806 5.83317 9.99992 5.83317C8.61921 5.83317 7.49992 6.95246 7.49992 8.33317C7.49992 9.71388 8.61921 10.8332 9.99992 10.8332Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+
+          Divinópolis, MG
+        </div>
+
+        <div class="fields">
+          <div class="field-wrapper">
+
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.4884 2.15484C10.1759 1.84225 9.75207 1.6666 9.31008 1.6665H3.33341C2.89139 1.6665 2.46746 1.8421 2.1549 2.15466C1.84234 2.46722 1.66675 2.89114 1.66675 3.33317V9.30984C1.66684 9.75183 1.8425 10.1757 2.15508 10.4882L9.40842 17.7415C9.78718 18.1179 10.2995 18.3291 10.8334 18.3291C11.3674 18.3291 11.8797 18.1179 12.2584 17.7415L17.7417 12.2582C18.1181 11.8794 18.3294 11.3671 18.3294 10.8332C18.3294 10.2992 18.1181 9.78693 17.7417 9.40817L10.4884 2.15484Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M6.25008 6.6665C6.4802 6.6665 6.66675 6.47996 6.66675 6.24984C6.66675 6.01972 6.4802 5.83317 6.25008 5.83317C6.01996 5.83317 5.83341 6.01972 5.83341 6.24984C5.83341 6.47996 6.01996 6.6665 6.25008 6.6665Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+
+            <input type="text" placeholder="Qual a atividade?" name="atividade" required="">
+          </div>
+
+          <div class="field-wrapper">
+
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.66667 1.6665V4.99984M13.3333 1.6665V4.99984M2.5 8.33317H17.5M4.16667 3.33317H15.8333C16.7538 3.33317 17.5 4.07936 17.5 4.99984V16.6665C17.5 17.587 16.7538 18.3332 15.8333 18.3332H4.16667C3.24619 18.3332 2.5 17.587 2.5 16.6665V4.99984C2.5 4.07936 3.24619 3.33317 4.16667 3.33317Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+
+            <select name="dia">
+              <option value="2024-03-01">01 de fevereiro</option>
+            </select>
+          </div>
+
+          <div class="field-wrapper">
+
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.0001 4.99984V9.99984L13.3334 11.6665M18.3334 9.99984C18.3334 14.6022 14.6025 18.3332 10.0001 18.3332C5.39771 18.3332 1.66675 14.6022 1.66675 9.99984C1.66675 5.39746 5.39771 1.6665 10.0001 1.6665C14.6025 1.6665 18.3334 5.39746 18.3334 9.99984Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+
+            <select name="hora">
+              <option value="10:30">10:30</option>
+            </select>
+          </div>
+        </div>
+
+        <button>Salvar atividade</button>
+      </form>
+
+
+      <main>
+        <h1> Reminder </h1>
+        <section>
+        </section>
+      </main>
+
+    </div>
+  </body>
+
+</html>
